@@ -11,6 +11,8 @@ export interface GroupBoxProps {
     expandIcon?: ReactNode;
     headerCaption?: string;
     style: CustomStyle[];
+    expandColor: string;
+    collapseColor: string;
 }
 
 export interface GroupBoxState {
@@ -51,7 +53,34 @@ export class GroupBox extends Component<GroupBoxProps, GroupBoxState> {
     };
 
     render(): ReactNode {
-        const renderedHeader = this.renderHeader();
+        const myStyle: CustomStyle = {
+            container: {
+                borderColor: "#000",
+                borderRadius: Platform.OS === "ios" ? 4 : 0,
+                borderWidth: 1,
+                overflow: "hidden"
+            },
+            header: {
+                backgroundColor: this.state.collapsed ? this.props.collapseColor : this.props.expandColor,
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                paddingVertical: 10,
+                paddingHorizontal: 15
+            },
+            headerContent: {
+                color: "#FFF",
+                fontSize: 16,
+                fontWeight: "bold"
+            },
+            content: {
+                paddingVertical: 10,
+                paddingHorizontal: 15
+            }
+        };
+        // const expandColor = this.props.expandColor;
+        // const collapsColor = this.props.collapseColor;
+        const renderedHeader = this.renderHeader(myStyle);
         const renderedContent = this.renderContent();
 
         if (!renderedHeader && !renderedContent) {
@@ -66,11 +95,11 @@ export class GroupBox extends Component<GroupBoxProps, GroupBoxState> {
         );
     }
 
-    private renderHeader = () => {
+    private renderHeader = (myStyle: CustomStyle) => {
         const { collapsible, headerCaption } = this.props;
 
         const view = (
-            <View style={this.styles.header}>
+            <View style={myStyle.header}>
                 <Text style={this.styles.headerContent}>{headerCaption}</Text>
                 {this.renderIcon()}
             </View>

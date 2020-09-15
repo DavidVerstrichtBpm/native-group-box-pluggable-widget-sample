@@ -6,8 +6,8 @@
     "copyright": "Mendix 2019",
     "author": "Mendix",
     "config": {
-        "widgetPath": "./test/MxTestProject/widgets",
-        "projectPath": "./test/MxTestProject/"
+        "widgetPath": "../..//widgets",
+        "projectPath": "../..//"
     },
     "packagePath": "com.mendix.widget.native",
     "scripts": {

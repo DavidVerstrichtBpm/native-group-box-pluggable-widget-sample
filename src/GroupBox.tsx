@@ -41,7 +41,9 @@ export class GroupBox extends Component<GroupBoxProps<CustomStyle>> {
             headerCaption,
             collapseIcon: this.renderIcon(defaultCollapseIconGlyph, collapseIcon),
             expandIcon: this.renderIcon(defaultExpandIconGlyph, expandIcon),
-            style
+            style,
+            expandColor: this.props.expandColor ? this.props.expandColor : "#000",
+            collapseColor: this.props.collapseColor ? this.props.collapseColor : "#000",
         };
 
         if (collapsible) {

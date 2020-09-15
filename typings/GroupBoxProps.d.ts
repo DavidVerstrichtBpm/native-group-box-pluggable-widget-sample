@@ -17,5 +17,7 @@ export interface GroupBoxProps<Style> extends CommonProps<Style> {
     collapsible: CollapsibleEnum;
     headerCaption?: string;
     expandIcon?: DynamicValue<NativeIcon>;
+    expandColor?: string;
     collapseIcon?: DynamicValue<NativeIcon>;
+    collapseColor?: string;
 }

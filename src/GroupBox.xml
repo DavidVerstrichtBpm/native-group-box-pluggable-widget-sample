@@ -31,10 +31,22 @@
                     <caption>Expand icon</caption>
                     <description>Icon used to indicate that the group box can be expanded</description>
                 </property>
+                
+                <property key="expandColor" type="string" required="false">
+                    <caption>Expand background color</caption>
+                    <description>Header color</description>
+                </property>
+
                 <property key="collapseIcon" type="icon" required="false">
                     <caption>Collapse icon</caption>
                     <description>Icon used to indicate that the group box can be collapsed</description>
                 </property>
+
+                <property key="collapseColor" type="string" required="false">
+                    <caption>Collapse background color</caption>
+                    <description>Header color</description>
+                </property>
+
             </propertyGroup>
             <propertyGroup caption="Common">
                 <systemProperty key="Name" />
