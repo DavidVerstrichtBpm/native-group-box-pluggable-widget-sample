@@ -18,6 +18,8 @@ export interface GroupBoxProps<Style> extends CommonProps<Style> {
     headerCaption?: string;
     expandIcon?: DynamicValue<NativeIcon>;
     expandColor?: string;
+    expandTextColor?: string;
     collapseIcon?: DynamicValue<NativeIcon>;
     collapseColor?: string;
+    collapseTextColor?: string;
 }

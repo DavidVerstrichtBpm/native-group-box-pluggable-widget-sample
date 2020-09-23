@@ -19,7 +19,7 @@ const defaultStyle: CustomStyle = {
     container: {},
     header: {},
     headerContent: {
-        color: "#FFF",
+        // color: "#FFF",
         fontSize: 16
     },
     content: {}
@@ -44,6 +44,8 @@ export class GroupBox extends Component<GroupBoxProps<CustomStyle>> {
             style,
             expandColor: this.props.expandColor ? this.props.expandColor : "#000",
             collapseColor: this.props.collapseColor ? this.props.collapseColor : "#000",
+            expandTextColor: this.props.expandTextColor ? this.props.expandTextColor : "#fff",
+            collapseTextColor: this.props.collapseTextColor ? this.props.collapseTextColor : "#fff",
         };
 
         if (collapsible) {

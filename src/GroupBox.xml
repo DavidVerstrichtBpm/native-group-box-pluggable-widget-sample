@@ -36,6 +36,10 @@
                     <caption>Expand background color</caption>
                     <description>Header color</description>
                 </property>
+                <property key="expandTextColor" type="string" required="false">
+                    <caption>Collapse text color</caption>
+                    <description>Header color</description>
+                </property>
 
                 <property key="collapseIcon" type="icon" required="false">
                     <caption>Collapse icon</caption>
@@ -44,6 +48,11 @@
 
                 <property key="collapseColor" type="string" required="false">
                     <caption>Collapse background color</caption>
+                    <description>Header color</description>
+                </property>
+
+                <property key="collapseTextColor" type="string" required="false">
+                    <caption>Collapse text color</caption>
                     <description>Header color</description>
                 </property>
 

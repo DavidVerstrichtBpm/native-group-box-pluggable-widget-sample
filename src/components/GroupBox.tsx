@@ -13,6 +13,8 @@ export interface GroupBoxProps {
     style: CustomStyle[];
     expandColor: string;
     collapseColor: string;
+    collapseTextColor: string;
+    expandTextColor: string;
 }
 
 export interface GroupBoxState {
@@ -69,7 +71,7 @@ export class GroupBox extends Component<GroupBoxProps, GroupBoxState> {
                 paddingHorizontal: 15
             },
             headerContent: {
-                color: "#FFF",
+                color: this.state.collapsed ? this.props.collapseTextColor : this.props.expandTextColor,
                 fontSize: 16,
                 fontWeight: "bold"
             },
@@ -100,7 +102,7 @@ export class GroupBox extends Component<GroupBoxProps, GroupBoxState> {
 
         const view = (
             <View style={myStyle.header}>
-                <Text style={this.styles.headerContent}>{headerCaption}</Text>
+                <Text style={myStyle.headerContent}>{headerCaption}</Text>
                 {this.renderIcon()}
             </View>
         );
