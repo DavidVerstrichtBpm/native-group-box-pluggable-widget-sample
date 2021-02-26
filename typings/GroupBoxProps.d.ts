@@ -15,7 +15,7 @@ export type CollapsibleEnum = "no" | "yesStartExpanded" | "yesStartCollapsed";
 export interface GroupBoxProps<Style> extends CommonProps<Style> {
     content?: any;
     collapsible: CollapsibleEnum;
-    headerCaption?: string;
+    headerCaption?: DynamicValue<string>;
     expandIcon?: DynamicValue<NativeIcon>;
     expandColor?: string;
     expandTextColor?: string;

@@ -9,12 +9,12 @@ export interface GroupBoxProps {
     collapsible: boolean;
     collapseIcon?: ReactNode;
     expandIcon?: ReactNode;
-    headerCaption?: string;
     style: CustomStyle[];
     expandColor: string;
     collapseColor: string;
     collapseTextColor: string;
     expandTextColor: string;
+    headerCaption: any;
 }
 
 export interface GroupBoxState {
@@ -99,10 +99,9 @@ export class GroupBox extends Component<GroupBoxProps, GroupBoxState> {
 
     private renderHeader = (myStyle: CustomStyle) => {
         const { collapsible, headerCaption } = this.props;
-
         const view = (
             <View style={myStyle.header}>
-                <Text style={myStyle.headerContent}>{headerCaption}</Text>
+                <Text style={myStyle.headerContent}>{headerCaption.value}</Text>
                 {this.renderIcon()}
             </View>
         );

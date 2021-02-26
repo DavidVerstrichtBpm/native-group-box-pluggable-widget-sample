@@ -32,13 +32,12 @@ export class GroupBox extends Component<GroupBoxProps<CustomStyle>> {
     private readonly styles = flattenStyles(defaultStyle, this.props.style);
 
     render(): ReactNode {
-        const { collapsible, collapseIcon, expandIcon, content, headerCaption, style } = this.props;
+        const { collapsible, collapseIcon, expandIcon, content, style } = this.props;
 
         const isCollapsible = collapsible !== "no";
 
         const props: WrappedGroupBoxProps = {
             collapsible: isCollapsible,
-            headerCaption,
             collapseIcon: this.renderIcon(defaultCollapseIconGlyph, collapseIcon),
             expandIcon: this.renderIcon(defaultExpandIconGlyph, expandIcon),
             style,
@@ -46,6 +45,7 @@ export class GroupBox extends Component<GroupBoxProps<CustomStyle>> {
             collapseColor: this.props.collapseColor ? this.props.collapseColor : "#000",
             expandTextColor: this.props.expandTextColor ? this.props.expandTextColor : "#fff",
             collapseTextColor: this.props.collapseTextColor ? this.props.collapseTextColor : "#fff",
+            headerCaption: this.props.headerCaption ? this.props.headerCaption : '',
         };
 
         if (collapsible) {

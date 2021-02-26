@@ -23,10 +23,15 @@
                 </property>
             </propertyGroup>
             <propertyGroup caption="Header">
-                <property key="headerCaption" type="string" required="false">
+                <property key="headerCaption" type="expression" required="false">
                     <caption>Caption</caption>
                     <description/>
+                    <returnType type="String" />
                 </property>
+                <!-- <property key="headerCaption" type="string" required="false">
+                    <caption>Caption</caption>
+                    <description/>
+                </property> -->
                 <property key="expandIcon" type="icon" required="false">
                     <caption>Expand icon</caption>
                     <description>Icon used to indicate that the group box can be expanded</description>
